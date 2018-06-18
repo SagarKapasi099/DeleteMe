@@ -3,13 +3,28 @@
 </head>
 <body>
 	<div>
+		<H1>A Java Class To Demonstrate Factorial</H1>
+	</div>
+	<div>
 		<code>
 			<pre>
-class Main {
+import java.util.Scanner;
+
+class Factorial {
 	public static void main(String[] args) {
-		System.out.println("Message From Main");
+		System.out.print("Input a number to find its Factorial: ");
+		Scanner scan = new Scanner(System.in);
+		long input = scan.nextLong();
+		System.out.print("The Factorial Of "+input+" is "+
+			getFactorial(input)
+		);
+	}
+	private static long getFactorial(long n) {
+		if(n == 1) return 1;
+		return n*getFactorial(n-1);
 	}
 }
+
 			</pre>
 		</code>
 	</div>
